@@ -1,0 +1,19 @@
+###
+POST http://localhost:3000/payroll
+Content-Type: application/json
+
+{
+  "SectorOfEconomics": "I don't know",
+
+  "position": "somebody",
+
+  "country": "the kindom of moon",
+
+  "salaryInYear": 9999999,
+
+  "age": 1,
+
+  "experienceInYears": 99,
+
+  "AdditionalSkills": ["h"]
+}
