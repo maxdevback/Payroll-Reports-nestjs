@@ -7,7 +7,7 @@ export class Payroll {
   id: number;
 
   @Column({ nullable: false })
-  SectorOfEconomics: string;
+  sector_of_economics: string;
 
   @Column({ nullable: false })
   position: string;
@@ -16,16 +16,13 @@ export class Payroll {
   country: string;
 
   @Column({ nullable: false })
-  salaryInYear: number;
+  salary_in_year: number;
 
   @Column({ nullable: false })
   age: number;
 
   @Column({ nullable: false })
-  experienceInYears: number;
-
-  @Column('simple-array', { nullable: false, default: [] })
-  AdditionalSkills: string[];
+  experience_in_years: number;
 
   @Column({ nullable: false, default: false })
   approved: boolean;

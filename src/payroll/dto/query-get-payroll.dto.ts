@@ -1,7 +1,7 @@
 import { Transform } from 'class-transformer';
 import { IsString, IsNumber, Min, Max } from 'class-validator';
 
-export class CreatePayrollDto {
+export class QueryGetPayrollDto {
   @IsString()
   sector_of_economics: string;
 
@@ -13,15 +13,13 @@ export class CreatePayrollDto {
 
   @Transform(({ value }) => parseInt(value))
   @IsNumber()
-  salary_in_year: number;
-
-  @Transform(({ value }) => parseInt(value))
-  @IsNumber()
   @Min(16)
   @Max(90)
   age: number;
 
   @Transform(({ value }) => parseInt(value))
   @IsNumber()
+  @Min(1)
+  @Max(30)
   experience_in_years: number;
 }

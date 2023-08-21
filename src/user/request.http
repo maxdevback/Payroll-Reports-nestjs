@@ -1,7 +1,10 @@
+###
+// Get auth Data
 GET http://localhost:3000/user/auth
 Content-Type: application/json
 
 ###
+// Register
 POST http://localhost:3000/user/register
 Content-Type: application/json
 
@@ -12,6 +15,7 @@ Content-Type: application/json
 }
 
 ###
+// Login
 POST http://localhost:3000/user/login
 Content-Type: application/json
 
@@ -21,13 +25,15 @@ Content-Type: application/json
 }
 
 ###
+// Logout
 DELETE http://localhost:3000/user/logout
 
 ###
-//Here id
+// Delete user by id
 DELETE  http://localhost:3000/user/1
 
 ###
+// Patch user by password and new fields 
 PATCH  http://localhost:3000/user
 Content-Type: application/json
 

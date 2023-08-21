@@ -1,19 +1,35 @@
 ###
+//Create payroll
 POST http://localhost:3000/payroll
 Content-Type: application/json
 
 {
-  "SectorOfEconomics": "I don't know",
+  "sector_of_economics": "I don't know",
 
   "position": "somebody",
 
   "country": "the kindom of moon",
 
-  "salaryInYear": 9999999,
+  "salary_in_year": 100000,
 
-  "age": 1,
+  "age": 20,
 
-  "experienceInYears": 99,
-
-  "AdditionalSkills": ["h"]
+  "experience_in_years": 2
 }
+
+###
+// Approve. Only admin
+PATCH http://localhost:3000/payroll/approve/2
+Content-Type: application/json
+
+###
+// Get by Id
+GET  http://localhost:3000/payroll/1
+
+###
+// Get all by query
+GET http://localhost:3000/payroll?sector_of_economics=I%20don%27t%20know&position=somebody&country=the%20kindom%20of%20moon&age=20&experience_in_years=2
+
+###
+// Delete payroll
+DELETE http://localhost:3000/payroll/2
